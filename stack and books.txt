@@ -1,0 +1,13 @@
+n=int(input())
+k=int(input())
+arr=list(map(int,input().split(",")))
+m=0
+s=0
+for i in range(n):
+    if arr[i]<=k:
+        s+=arr[i]
+    else:
+        m=max(s,m)
+        s=0
+m=max(s,m)
+print(m)
